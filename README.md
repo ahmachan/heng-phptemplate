@@ -20,7 +20,7 @@ echo $tpl->fetch('index.tpl');
 And it can be used with the following templates.
 
 <!-- goodslist.tpl -->
-''''
+'''
 <table>
     <tr>
         <th>Id</th>
@@ -37,9 +37,9 @@ And it can be used with the following templates.
     </tr>
     <? endforeach; ?>
 </table>
-''''
+'''
 <!-- index.tpl -->
-''''
+'''
 <html>
     <head>
         <title><?=$title;?></title>
@@ -49,4 +49,4 @@ And it can be used with the following templates.
         <?=$content;?>
     </body>
 </html>
-''''
+'''
