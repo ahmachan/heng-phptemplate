@@ -1,6 +1,6 @@
 {
   "name": "ahmachan/heng-phptemplate",
-  "type": "library",
+  "type": "project",
   "description": "Think - the compiling PHP template engine",
   "keywords": ["template engine"],
   "license": "MIT",  
@@ -13,12 +13,8 @@
         "email": "ahmachan@qq.com"
       }
   ],
-  "minimum-stability": "dev",
+  "minimum-stability": "stand",
   "require": {
       "php": ">=5.3"
-  },
-  "autoload": {
-     "classmap": [
-        ]
   }
 }
