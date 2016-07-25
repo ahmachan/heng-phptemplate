@@ -1,9 +1,8 @@
 {
-    "name": "smarty/smarty",
+    "name": "ahmachan/heng-tmpl",
     "type": "library",
     "description": "Think - the compiling PHP template engine",
     "keywords": ["template engine"],
-    "homepage": "/",
     "license": "LGPL-3.0",
     "authors": [
         {
@@ -11,6 +10,7 @@
             "email": "ahmachan@qq.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3"
     },
