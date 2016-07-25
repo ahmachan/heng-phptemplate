@@ -113,7 +113,9 @@ class Template
     function fetch($file)
     {
         extract($this->vars);          // Extract the vars to local namespace
-        ob_start();                    // Start output buffering
+        //页面缓存
+        ob_start();
+        ob_implicit_flush(0);            // Start output buffering
         include $this->path . $file;  // Include the file
         $contents = ob_get_contents(); // Get the contents of the buffer
         ob_end_clean();                // End buffering and discard
@@ -127,9 +129,18 @@ class Template
      *
      * @return string
      */
-    function display($file)
+    function display($file,$display=true,$charset='utf-8',$contentType='text/html')
     {
-        echo $this->fetch($file);
+       // 网页字符编码
+       header("Content-Type:".$contentType."; charset=".$charset);       
+       header("Cache-control: private");  //支持页面回跳
+       $content=$this->fetch($file);
+       // 输出模板文件
+       if($display){
+        	echo $content;
+       }else{
+        	return $content;
+       }
     }
 }
 
