@@ -13,7 +13,7 @@
         "email": "ahmachan@qq.com"
       }
   ],
-  "minimum-stability": "stand",
+  "minimum-stability": "beta",//must be one of stable,rc,alpha,beta,dev
   "require": {
       "php": ">=5.3"
   }
