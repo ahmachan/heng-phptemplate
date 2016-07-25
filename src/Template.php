@@ -70,7 +70,7 @@ class Template
     }
 
     /**
-     * Set a template variable.
+     * Set a template variable(deprecated).
      *
      * @param string $name  name of the variable to set
      * @param void   $value the value of the variable
