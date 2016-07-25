@@ -1,6 +1,6 @@
 <?php
 /**
- * Template engine base on PHP 4.0+
+ * Template engine base on PHP 5.3+
  *
  * Usage
  * <code>
@@ -31,6 +31,11 @@ class Template
         $this->vars = array();
     }
 
+    /**
+     * 获取一个实例
+     * @param string $path 存放模板的目录
+     * @return Template
+     */
     static function create($path = '')
     {
         return new Template($path);
@@ -53,7 +58,7 @@ class Template
     /**
      * Set a template variable.
      * @param mixed $name 要显示的模板变量
-     * @param mixed $value 变量的
+     * @param mixed $value 变量的值
      * @return Template
      */
     function assign($name,$value='') {
@@ -69,21 +74,6 @@ class Template
         return $this;
     }
 
-    /**
-     * Set a template variable(deprecated).
-     *
-     * @param string $name  name of the variable to set
-     * @param void   $value the value of the variable
-     *
-     * @deprecated This will probably be deprecated in next version
-     *
-     * @return Template
-     */
-    function set($name, $value)
-    {
-        $this->vars[$name] = $value;
-        return $this;
-    }
 
     /**
      * Set a bunch of variables at once using an associative array.
